@@ -56,7 +56,8 @@ export function ResumeEditor({ data, onChange }: ResumeEditorProps) {
 
   return (
     <div className="resume-editor">
-      <h2 className="editor-title">编辑简历</h2>
+      <h2 className="editor-title">简历信息编辑</h2>
+      <p className="editor-subtitle">按模块维护内容，右侧会实时同步预览效果。</p>
       <div className="editor-anchor-nav">
         <button 
           type="button" 
@@ -93,6 +94,13 @@ export function ResumeEditor({ data, onChange }: ResumeEditorProps) {
         >
           技能
         </button>
+        <button
+          type="button"
+          className={`anchor-chip ${activeSection === 'section-summary' ? 'active' : ''}`}
+          onClick={() => jumpTo('section-summary')}
+        >
+          自我评价
+        </button>
       </div>
 
       <div id="section-basics" className="editor-anchor-section">
@@ -125,10 +133,12 @@ export function ResumeEditor({ data, onChange }: ResumeEditorProps) {
           onChange={(skills) => update({ skills })}
         />
       </div>
-      <SummaryForm
-        value={data.summary}
-        onChange={(summary) => update({ summary })}
-      />
+      <div id="section-summary" className="editor-anchor-section">
+        <SummaryForm
+          value={data.summary}
+          onChange={(summary) => update({ summary })}
+        />
+      </div>
     </div>
   )
 }

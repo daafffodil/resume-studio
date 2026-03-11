@@ -200,12 +200,20 @@ function App() {
       </header>
       <div className="app-layout">
         <aside className="app-editor">
+          <div className="panel-heading">
+            <h2>编辑器</h2>
+            <p>分区录入，自动保存</p>
+          </div>
           <ResumeEditor data={resume} onChange={setResume} />
         </aside>
         <main className="app-preview">
+          <div className="panel-heading preview-heading">
+            <h2>实时预览</h2>
+            <p>A4 · {Math.round(previewScale * 100)}%</p>
+          </div>
           <div className="preview-toolbar">
-            <span>实时预览（A4）</span>
-            <span>{Math.round(previewScale * 100)}%</span>
+            <span>所见即所得预览</span>
+            <span>建议导出前再快速检查一遍排版</span>
           </div>
           <div className="preview-viewport" ref={previewViewportRef}>
             <div
