@@ -1,0 +1,193 @@
+/* 简历：固定 A4 尺寸 + 内边距，网页与 PDF 完全一致（WYSIWYG） */
+.resume-template {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  box-sizing: border-box;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 18mm 20mm;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #222;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+.resume-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.resume-contact {
+  margin: 0 0 2px 0;
+  font-size: 11px;
+}
+
+.resume-target {
+  margin: 0;
+  font-size: 10px;
+  color: #444;
+}
+
+.resume-header-main {
+  text-align: left;
+}
+
+.resume-avatar {
+  flex-shrink: 0;
+  width: 30mm;
+  height: 30mm;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.resume-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resume-section {
+  margin-bottom: 12px;
+}
+
+/* 一级标题：教育经历、工作经历等，比二级标题（学校名、公司名）更大 */
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid #333;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.section-item {
+  margin-bottom: 10px;
+}
+
+.section-item:last-child {
+  margin-bottom: 0;
+}
+
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* 二级标题：中国传媒大学、公司名等 */
+.item-main {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.item-note {
+  font-size: 10px;
+  color: #555;
+}
+
+.item-sub {
+  font-size: 10px;
+  color: #444;
+  margin-top: 1px;
+}
+
+.item-date {
+  font-size: 10px;
+  color: #666;
+  margin-top: 1px;
+}
+
+/* 工作经历：职位与日期同一行（日期右对齐）、实心圆点 */
+.experience-item .item-head {
+  margin-bottom: 2px;
+}
+
+.experience-item .item-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.experience-item .item-date {
+  margin-top: 0;
+}
+
+.item-bullets {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.item-bullets li {
+  margin-bottom: 3px;
+}
+
+.experience-item .item-bullets li {
+  text-align: justify;
+}
+
+.item-role {
+  font-size: 10px;
+  color: #555;
+  font-weight: normal;
+}
+
+.item-desc {
+  margin: 4px 0 0 0;
+  font-size: 10px;
+  color: #444;
+  text-align: justify;
+}
+
+.skills-line {
+  margin: 0 0 4px 0;
+  font-size: 10px;
+}
+
+.skills-line:last-child {
+  margin-bottom: 0;
+}
+
+.summary-content {
+  margin: 0;
+  font-size: 10px;
+  text-align: justify;
+}
+
+/* 打印：A4 零外边距，仅靠内容区自身 padding 控制边距，与网页视觉一致 */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .resume-template {
+    width: 210mm !important;
+    min-height: 297mm;
+    padding: 18mm 20mm !important;
+    margin: 0 !important;
+    box-shadow: none;
+  }
+  .resume-template * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

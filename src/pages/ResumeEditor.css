@@ -1,0 +1,211 @@
+.resume-editor {
+  padding: 18px 18px 36px 18px;
+  max-width: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-title {
+  font-size: 18px;
+  margin: 0 0 14px 0;
+  color: #0f172a;
+  position: static;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.editor-anchor-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -18px -18px 12px -18px;
+  padding: 10px 18px 12px 18px;
+  background: #fff;
+  border-bottom: 1px solid #f1f5f9;
+  flex-shrink: 0;
+}
+
+.anchor-chip {
+  border: 1px solid #dbeafe;
+  background: #f8fafc;
+  color: #334155;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.anchor-chip:hover {
+  background: #e0f2fe;
+  color: #0f172a;
+}
+
+.anchor-chip.active {
+  background: #0ea5e9;
+  color: #ffffff;
+  border-color: #0ea5e9;
+  font-weight: 600;
+}
+
+.editor-anchor-section {
+  scroll-margin-top: 16px;
+}
+
+.form-section {
+  margin-bottom: 14px;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.form-section h3 {
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #555;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.form-section textarea {
+  resize: vertical;
+  min-height: 92px;
+}
+
+.form-block {
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #fefefe;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.avatar-preview {
+  margin-top: 8px;
+}
+
+.avatar-preview img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.form-block .btn-remove {
+  margin-top: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #dc2626;
+  background: transparent;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.form-block .btn-remove:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+
+.form-block .btn-remove:active {
+  background: #fecaca;
+}
+
+.inline-actions {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 0 0;
+  font-size: 11px;
+  color: #666;
+}
+
+.btn-add-line {
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #0284c7;
+  background: transparent;
+  border: 1px solid #7dd3fc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-add-line:hover {
+  background: #e0f2fe;
+  border-color: #0ea5e9;
+}
+
+.textarea-bullets {
+  min-height: 180px;
+}
+
+.btn-add {
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #0284c7;
+  background: transparent;
+  border: 1px solid #7dd3fc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-add:hover {
+  background: #e0f2fe;
+  border-color: #0ea5e9;
+}
+
+.btn-add:active {
+  background: #bfdbfe;
+}
+
+/* Form validation styles */
+.input-error {
+  border-color: #ef4444 !important;
+  background: #fef2f2 !important;
+}
+
+.field-error {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.field-hint {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #f97316;
+  font-weight: 500;
+}
